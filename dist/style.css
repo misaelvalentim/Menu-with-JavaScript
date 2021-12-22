@@ -1,3 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header .header__nav {
+  width: 100%;
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+@media only screen and (min-width: 768px) {
+  .header .header__nav {
+    padding: 0;
+    justify-content: space-around;
+  }
+}
+.header .header__logo {
+  color: #FFFFFF;
+  font-size: 1.5em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.header .header__menu {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .header .header__menu {
+    display: flex;
+  }
+  .header .header__menu .menu__list {
+    padding: 1em 0.8em;
+    margin: 0 0;
+    cursor: pointer;
+  }
+  .header .header__menu .menu__list:hover {
+    background: #555;
+    transition: background 0.3s ease-in-out;
+  }
+  .header .header__menu .menu__item {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.header__hamburger {
+  border-top: 3px;
+  border-style: solid;
+  border-color: white;
+  margin-right: 1em;
+  padding: 0.5em 1.5em;
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .header__hamburger {
+    display: none;
+  }
+}
+
+.header__hamburger:after {
+  content: "";
+  position: absolute;
+  border: inherit;
+  top: 0.2em;
+  left: 0;
+  width: 3em;
+  height: 0.3em;
+}
+
+.header__hamburger:before {
+  content: "";
+  position: absolute;
+  border: inherit;
+  top: 0.6em;
+  left: 0;
+  width: 3em;
+  height: 0.3em;
+}
+
+#products {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__title {
+  font-size: 2em;
+  color: #333;
+}
+
+#promotions {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+.promotions__title {
+  font-size: 2em;
+  color: #FFFFFF;
+}
+
+#contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__title {
+  font-size: 2em;
+  color: #333;
+}
 
 /*# sourceMappingURL=style.css.map */
