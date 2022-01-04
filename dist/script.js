@@ -3,6 +3,7 @@ const nav = document.querySelector('.header__nav');
 const menuLi = document.querySelectorAll('.header__menu .menu__list');
 const productsSection = document.querySelector('#products');
 const scrollTopButton = document.querySelector('.scrollTopButton');
+var prevScrollpos = window.pageYOffset;
 
 
 // Activating mobile hamburger menu
@@ -33,21 +34,22 @@ function hamburgerClickable() {
 // Desabling mobile hamburger when clicking on menu lists/items
 menuLi.forEach((e) => {
     e.addEventListener('click', () => {
-        nav.classList.remove('active');
         document.body.style.overflow = 'initial';
         scrollTopButton.style.display = 'initial';
+        nav.classList.remove('active');
     });
 })
 
 // Making desktop/tablet fixed menu after scrolling
-window.addEventListener('scroll', animaScroll);
 
-function animaScroll() {
-    const productsTop = productsSection.getBoundingClientRect();
-    const navFixed = nav;
-    if (productsTop.top < -50) {
-        navFixed.classList.add('navFixed');
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      nav.style.top = "0";
+      nav.classList.add('navFixed')
     } else {
-        navFixed.classList.remove('navFixed');
+        nav.style.top = "-60px";
+        nav.classList.remove('navFixed')
     }
+    prevScrollpos = currentScrollPos;
 }

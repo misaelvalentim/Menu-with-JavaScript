@@ -8,6 +8,9 @@
         @include tablet {
             padding: 0;
             justify-content: space-around;
+            position: fixed;
+            top: 0;
+            transition: top 1s ease-in-out;
         }
     }
     .header__logo {
@@ -165,23 +168,16 @@
     color: #e98818;
     font-weight: bold;
     right: 0;
-    top: -.1em;
+    top: -.15em;
     margin-bottom: .1em;
     margin-right: .13em;
-    transform: rotate(-90deg)
+    transform: rotate(-89deg)
 }
+
 .header__nav.navFixed {
     @include tablet {
         padding: 0;
         position: fixed;
-        background: #333d;
         box-shadow: 2px 2px 2px black;
-        .header__menu .menu__list {
-            padding: 1.5em 1em;
-            transition: .5s ease-in-out;
-        }
-        .header__menu .menu__list:hover {
-            background: #ddd4;
-        }
     }
 }

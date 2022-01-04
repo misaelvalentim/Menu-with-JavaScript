@@ -67,6 +67,9 @@ html {
   .header .header__nav {
     padding: 0;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    transition: top 1s ease-in-out;
   }
 }
 .header .header__logo {
@@ -238,25 +241,17 @@ html {
   color: #e98818;
   font-weight: bold;
   right: 0;
-  top: -0.1em;
+  top: -0.15em;
   margin-bottom: 0.1em;
   margin-right: 0.13em;
-  transform: rotate(-90deg);
+  transform: rotate(-89deg);
 }
 
 @media only screen and (min-width: 768px) {
   .header__nav.navFixed {
     padding: 0;
     position: fixed;
-    background: #333d;
     box-shadow: 2px 2px 2px black;
-  }
-  .header__nav.navFixed .header__menu .menu__list {
-    padding: 1.5em 1em;
-    transition: 0.5s ease-in-out;
-  }
-  .header__nav.navFixed .header__menu .menu__list:hover {
-    background: #ddd4;
   }
 }
 
