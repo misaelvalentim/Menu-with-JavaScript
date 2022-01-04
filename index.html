@@ -10,7 +10,7 @@
 <body>
     <header id="home" class="header">
         <nav class="header__nav">
-            <p class="header__logo">Logo</p>
+            <a href="#home" class="header__logo">Logo</a>
             <ul class="header__menu">
                 <li class="menu__list"><a href="#home" class="menu__item">Home</a></li>
                 <li class="menu__list"><a href="#products" class="menu__item">Products</a></li>
@@ -18,26 +18,28 @@
                 <li class="menu__list"><a href="#contact" class="menu__item">Contact</a></li>
             </ul>
             <i class="header__hamburger"></i>
+            <a href="#home" class="scrollTopButton"></a>
         </nav>
     </header>
     <main>
-        <section id="products" class="products">
+        <section id="products" class="section products">
             <h2 class="products__title">
                 Products Section
             </h2>
         </section>
-        <section id="promotions" class="promotions">
+        <section id="promotions" class="section promotions">
             <h2 class="promotions__title">
                 Promotions Section
             </h2>
         </section>
     </main>
     <footer>
-        <section id="contact" class="contact">
+        <section id="contact" class="section contact">
             <h2 class="contact__title">
                 Contact Session
             </h2>
         </section>
     </footer>
+    <script src="dist/script.js"></script>
 </body>
 </html>
